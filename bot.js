@@ -34,7 +34,8 @@ client.on('message', message => {
             console.log(member.id);
             
             member.send(`Shatters Central: https://discord.gg/zNZUHbe \n Realm Raiders: https://discord.gg/GKe3m4p`)
-            // wait(500);           
+            console.log('message send i think')
+            wait(100);           
         })
                        
     }
