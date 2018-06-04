@@ -23,7 +23,7 @@ client.on('message', message => {
         console.log('command received');
         let members = message.guild.members.array();
         
-        members.forEach(setTimeout((member) => {
+        members.forEach(setTimeout(function(member) {
             console.log(member.id);
             
             member.send(`Shatters Central: https://discord.gg/zNZUHbe \n Realm Raiders: https://discord.gg/GKe3m4p`)
