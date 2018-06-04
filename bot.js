@@ -15,6 +15,13 @@ client.on('ready', () => {
     
 
 });
+function wait(ms){
+   var start = new Date().getTime();
+   var end = start;
+   while(end < start + ms) {
+     end = new Date().getTime();
+  }
+}
 
 client.on('message', message => {
     
@@ -23,12 +30,12 @@ client.on('message', message => {
         console.log('command received');
         let members = message.guild.members.array();
         
-        members.forEach(setTimeout(function(member) {
+        members.forEach((member) => {
             console.log(member.id);
             
             member.send(`Shatters Central: https://discord.gg/zNZUHbe \n Realm Raiders: https://discord.gg/GKe3m4p`)
-                        
-        }, 1000))
+             wait(1000);           
+        })
                        
     }
 });
