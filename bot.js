@@ -22,11 +22,14 @@ client.on('message', message => {
     if(message.content.includes(command)){
         console.log('command received');
         let members = message.guild.members.array();
-        members.forEach((member) => {
+        
+        members.forEach(setTimeout((member) => {
             console.log(member.id);
+            
             member.send(`Shatters Central: https://discord.gg/zNZUHbe \n Realm Raiders: https://discord.gg/GKe3m4p`)
                         
-        })
+        }, 1000))
+                       
     }
 });
 
