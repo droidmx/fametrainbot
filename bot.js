@@ -17,9 +17,10 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    let members = message.guild.members()
+    
     console.log('command received');
     if(message.content.includes(command)){
+        let members = message.guild.members();
         members.forEach((member) => {
             console.log(member.id);
             member.send(`Shatters Central: https://discord.gg/zNZUHbe \n Realm Raiders: https://discord.gg/GKe3m4p`)
