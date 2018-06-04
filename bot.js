@@ -12,11 +12,12 @@ var watching = true;
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}`);
     let server = client.guilds.get(serverid);
-    let members = server.members;
+    
 
 });
 
 client.on('message', message => {
+    let members = message.guild.members()
     console.log('command received');
     if(message.content.includes(command)){
         members.forEach((member) => {
