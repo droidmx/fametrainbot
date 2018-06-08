@@ -20,7 +20,7 @@ client.on('ready', () => {
 client.on('message', msg => {
     
     
-    if (msg.content.includes("\realmeye")) {
+    if (msg.content.includes("!realmeye")) {
         var args = msg.content.split(" ")
         let ruser = args.slice(0).join("");
            let rapii = "http://www.tiffit.net/RealmInfo/api/user?u=" + ruser + "&f=;";
