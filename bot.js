@@ -56,7 +56,7 @@ return msg.channel.send("Please include a username after `\realmeye`.")
               var abic = p.body.pets[0].ability3.type
               var levc = p.body.pets[0].ability3.level
               if (!p.body.pets[0].ability3.unlocked == true) {
-               var abi3 = ""
+               var abic = ""
                var levc = ""
               }else{
                   var levc = levc.toString();
