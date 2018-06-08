@@ -79,9 +79,9 @@ return msg.channel.send("Please include a username after `\realmeye`.")
         })// end petinfo
     snekfetch.get(rapii).then(r=> {
         if (!r.body.error) {
-            const desc1 = r.body.description[0]
-            const desc2 = r.body.description[1]
-            const desc3 = r.body.description[2]
+            var desc1 = r.body.description[0]
+            var desc2 = r.body.description[1]
+            var desc3 = r.body.description[2]
 var name = r.body.name
 var stars = r.body.rank
 var location = r.body.last_seen
