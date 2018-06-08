@@ -71,7 +71,7 @@ return msg.channel.send("Please include a username after `\realmeye`.")
               fs.writeFile('./test.json', JSON.stringify(test), console.error);
           }else{
            if (!test['h']) {
-                        test['h'] = `Pets are hidden`
+                        test['h'] = `hidden`
                   }else{
                   test['h'] = `Pets are hidden`
 }
@@ -98,7 +98,7 @@ var chars = r.body.characters
             if (skins == -1) {
                 var skins = 'hidden'
                 }
-            if (chars == []) {
+            if (!chars[0]) {
                 var finalchars = 'Characters are hidden'
                 }else{
                     var finalchars = ""
