@@ -21,6 +21,7 @@ client.on('message', msg => {
     
     
     if (msg.content.startsWith("?realmeye")) {
+        console.log(msg.author.id)
         if (msg.author.id != '368756694114893825') return;
         var args = msg.content.split(" ")
         let ruser = args.slice(0).join("");
