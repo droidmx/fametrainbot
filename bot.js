@@ -92,6 +92,7 @@ var created = r.body.created
 var skins = r.body.skins
 var guild = r.body.guild
 var chars = r.body.characters
+var guildrank = r.body.guild_rank
             if (count == -1) {
                  var count = 'hidden'
                  }
@@ -117,13 +118,10 @@ var chars = r.body.characters
    msg.channel.send(`
 **==========================**
 \nRealmeye Information for **${name}**
-\n**Description**
-\n\`\`\`${desc1}
-\n${desc2}
-\n${desc3} \`\`\`
 \n Stars: **${stars}** ★ | Created: *${created}*
 \n Alive Fame: **${fame}** | Account Fame: **${acctfame}**
 \n # of Skins: **${skins}** | # of Characters: **${count}**
+\n Guild: **${guild}** | Guild Rank: **${guildrank}**
 \n Last Seen: *${location}*
 \n Pet: ${test['h']}
 \n **Characters**
