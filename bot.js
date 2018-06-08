@@ -103,7 +103,7 @@ var chars = r.body.characters
                 }else{
                     var finalchars = ""
                    for (i in chars) {
-                   finalchars += chars[i].stats_maxed
+                   finalchars += `**${chars[i].stats_maxed}**`
                    finalchars += " "
                    finalchars += chars[i].class
                    finalchars += ", "
@@ -116,11 +116,11 @@ var chars = r.body.characters
         }
    msg.channel.send(`
 **==========================**
-\nRealmeye Information for ${name}
-\n Stars: ${stars} ★ | Created: ${created}
-\n Alive Fame: ${fame} | Account Fame: ${acctfame}
-\n # of Skins: ${skins} | # of Characters: ${count}
-\n Last Seen: ${location} 
+\nRealmeye Information for **${name}**
+\n Stars: **${stars}** ★ | Created: *${created}*
+\n Alive Fame: **${fame}** | Account Fame: **${acctfame}**
+\n # of Skins: **${skins}** | # of Characters: **${count}**
+\n Last Seen: *${location}*
 \n Pet: ${test['h']}
 \n **Characters**
 \n ${finalchars}
