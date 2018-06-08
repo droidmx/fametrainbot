@@ -21,6 +21,7 @@ client.on('message', msg => {
     
     
     if (msg.content.startsWith("?guild")) {
+        msg.delete();
         var argss = msg.content.split(" ").splice(1)
         let guild = argss.slice(0).join(' ');
         if (!guild) {
