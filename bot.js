@@ -101,7 +101,7 @@ var chars = r.body.characters
             if (chars == []) {
                 var finalchars = 'Characters are hidden'
                 }else{
-                    const finalchars = ""
+                    var finalchars = ""
                    for (i in chars) {
                    finalchars += chars[i].stats_maxed
                    finalchars += " "
