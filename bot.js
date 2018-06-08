@@ -15,20 +15,11 @@ client.on('ready', () => {
     
 
 });
-function wait(ms){
-   var start = new Date().getTime();
-   var end = start;
-   while(end < start + ms) {
-     end = new Date().getTime();
-  }
-}
+
 
 client.on('message', msg => {
     
-    var args = msg.content.split(" ");
-    if (msg.author.id != yourid) {
-        return;
-    }
+    
     if (msg.content.startsWith("\realmeye")) {
         let ruser = args.slice(0).join("");
            let rapii = "http://www.tiffit.net/RealmInfo/api/user?u=" + ruser + "&f=;";
