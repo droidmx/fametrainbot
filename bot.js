@@ -116,7 +116,7 @@ var guildrank = r.body.guild_rank
             return;
         }
    msg.channel.send(`
-**==========================**
+**====================================**
 \nRealmeye Information for **${name}**
 \n Stars: **${stars}** ★ | Created: *${created}*
 \n Alive Fame: **${fame}** | Account Fame: **${acctfame}**
@@ -126,7 +126,7 @@ var guildrank = r.body.guild_rank
 \n Pet: ${test['h']}
 \n **Characters**
 \n ${finalchars}
-\n**==========================**
+\n**====================================**
 `)
     
     }) //endrealmeyechar
