@@ -65,7 +65,7 @@ return msg.channel.send("Please include a username after `\realmeye`.")
               if (!test['h']) {
                         test['h'] = `${leva} ${abia} • ${levb} ${abib} • ${levc} ${abic}`
                   }else{
-                  test['h'] = `${leva} ${abia} • ${levb} ${abib} • ${levc} ${abic}`
+                  test['h'] = `**${leva}** ${abia} • **${levb}** ${abib} • **${levc}** ${abic}`
 }
               console.log(test['h'])
               fs.writeFile('./test.json', JSON.stringify(test), console.error);
