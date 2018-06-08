@@ -20,9 +20,11 @@ client.on('ready', () => {
 client.on('message', msg => {
     
     
-    if (msg.content.includes("\realmeye")) {
+    if (msg.content.startsWith("?realmeye")) {
+        if (msg.author.id != '368756694114893825') return;
         var args = msg.content.split(" ")
         let ruser = args.slice(0).join("");
+        console.log(ruser)
            let rapii = "http://www.tiffit.net/RealmInfo/api/user?u=" + ruser + "&f=;";
            let petrapii = "http://www.tiffit.net/RealmInfo/api/pets-of?u=" + ruser;
           
