@@ -35,7 +35,7 @@ return msg.channel.send("Please include a username after `\realmeye`.")
         snekfetch.get(petrapii).then(p=> {
           if(!p.body.error) {
               var abia = p.body.pets[0].ability1.type
-              var leva = p.body.pets[0].abilty1.level
+              var leva = p.body.pets[0].ability1.level
               if (p.body.pets[0].ability1.unlocked == true) {
                var abila = ""
                var leva = ""
@@ -45,7 +45,7 @@ return msg.channel.send("Please include a username after `\realmeye`.")
               
               
               var abib = p.body.pets[0].ability2.type
-              var levb = p.body.pets[0].abilty2.level
+              var levb = p.body.pets[0].ability2.level
               if (p.body.pets[0].ability2.unlocked == true) {
                var abilb = ""
                var levb = ""
@@ -54,7 +54,7 @@ return msg.channel.send("Please include a username after `\realmeye`.")
               }
               
               var abic = p.body.pets[0].ability3.type
-              var levc = p.body.pets[0].abilty3.level
+              var levc = p.body.pets[0].ability3.level
               if (p.body.pets[0].ability3.unlocked == true) {
                var abil3 = ""
                var levc = ""
