@@ -50,12 +50,14 @@ client.on('message', msg => {
                 }
                 
                 msg.channel.send(`
-Guild Information for **${guildname}**
+**====================================**
+\nGuild Information for **${guildname}**
 \n# of Members: **${membercount}** | # of Characters: **${characters}**
 \nGuild Fame: **${guildfame}** | World Rank: **${worldrank}**
 \nMain Server: **${activeserver}** | Server Rank: **${serverrank}**
 \n__**Members:**__
-${guildmembers}
+\n${guildmembers}
+**====================================**
 
 
 
