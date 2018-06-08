@@ -115,7 +115,8 @@ var chars = r.body.characters
             return;
         }
    msg.channel.send(`
-Realmeye Information for **${name}**
+**==========================**
+\nRealmeye Information for ${name}
 \n Stars: ${stars} ★ | Created: ${created}
 \n Alive Fame: ${fame} | Account Fame: ${acctfame}
 \n # of Skins: ${skins} | # of Characters: ${count}
@@ -123,6 +124,7 @@ Realmeye Information for **${name}**
 \n Pet: ${test['h']}
 \n **Characters**
 \n ${finalchars}
+\n**==========================**
 `)
     
     }) //endrealmeyechar
