@@ -36,8 +36,8 @@ return msg.channel.send("Please include a username after `\realmeye`.")
           if(!p.body.error) {
               var abia = p.body.pets[0].ability1.type
               var leva = p.body.pets[0].ability1.level
-              if (p.body.pets[0].ability1.unlocked == true) {
-               var abila = ""
+              if (!p.body.pets[0].ability1.unlocked == true) {
+               var abia = ""
                var leva = ""
               }else{
                var leva = leva.toString();   
@@ -46,8 +46,8 @@ return msg.channel.send("Please include a username after `\realmeye`.")
               
               var abib = p.body.pets[0].ability2.type
               var levb = p.body.pets[0].ability2.level
-              if (p.body.pets[0].ability2.unlocked == true) {
-               var abilb = ""
+              if (!p.body.pets[0].ability2.unlocked == true) {
+               var abib = ""
                var levb = ""
               }else{
                   var levb = levb.toString();
@@ -55,8 +55,8 @@ return msg.channel.send("Please include a username after `\realmeye`.")
               
               var abic = p.body.pets[0].ability3.type
               var levc = p.body.pets[0].ability3.level
-              if (p.body.pets[0].ability3.unlocked == true) {
-               var abil3 = ""
+              if (!p.body.pets[0].ability3.unlocked == true) {
+               var abi3 = ""
                var levc = ""
               }else{
                   var levc = levc.toString();
