@@ -20,10 +20,57 @@ client.on('ready', () => {
 client.on('message', msg => {
     
     
+    if (msg.content.startsWith("?guild")) {
+        var argss = msg.content.split(" ").splice(1)
+        let guild = argss.slice(0).join(' ');
+        if (!guild) {
+         msg.reply('Please provide a guild to search for')   
+        }
+        console.log(guild)
+         if (msg.author.id != '368756694114893825') return;
+        let guildapi = "http://www.tiffit.net/RealmInfo/api/guild?g=" + guild + "&fe"
+        snekfetch.get(guildapi).then(g=> {
+            if (!g.body.error) {
+                var guildname = g.body.name
+                var membercount = g.body.memberCount
+                var membercount = membercount.toString()
+                var characters = g.body.characters
+                var characters = characters.toString()
+                var guildfame = g.body.fame.amount
+                var guildfame = guildfame.toString()
+                var worldrank = g.body.fame.rank
+                var activeserver = g.body.most_active.server
+                var serverrank = g.body.most_active.rank
+                
+                var guildmembers = ""
+                
+                for (i in g.body.members) {
+                 guildmembers += `${g.body.members[i].name}`
+                 guildmembers += "\n"
+                }
+                
+                msg.channel.send(`
+Guild Information for **${guildname}**
+\n# of Members: **${membercount}** | # of Characters: **${characters}**
+\nGuild Fame: **${guildfame}** | World Rank: **${worldrank}**
+\nMain Server: **${activeserver}** | Server Rank: **${serverrank}**
+\n__**Members:**__
+${guildmembers}
+
+
+
+`)
+                
+            }else{
+                msg.reply("Invalid Guild name entered")
+            }
+        })
+    }
     if (msg.content.startsWith("?realmeye")) {
+        var args = msg.content.split(" ")
         console.log(msg.author.id)
         if (msg.author.id != '368756694114893825') return;
-        var args = msg.content.split(" ")
+        
         let ruser = args[1]
         console.log(ruser)
            let rapii = "http://www.tiffit.net/RealmInfo/api/user?u=" + ruser + "&f=;";
@@ -124,7 +171,7 @@ var guildrank = r.body.guild_rank
 \n Guild: **${guild}** | Guild Rank: **${guildrank}**
 \n Last Seen: *${location}*
 \n Pet: ${test['h']}
-\n **Characters**
+\n __**Characters**__
 \n ${finalchars}
 \n**====================================**
 `)
