@@ -21,6 +21,8 @@ client.on('message', msg => {
     
     
     if (msg.content.startsWith("?guild")) {
+
+ if (msg.author.id != '368756694114893825') return;
         msg.delete();
         var argss = msg.content.split(" ").splice(1)
         let guild = argss.slice(0).join(' ');
