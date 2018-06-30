@@ -28,7 +28,7 @@ client.on('message', msg => {
     if (msg.content.startsWith("?setpresence")) {
      var args = msg.content.split(" ");
      var type = args[1]
-     var name = args[2]
+     var name = args.slice(2)
      if (!type || !name) return msg.channel.send('Type options: PLAYING, STREAMING, WATCHING, LISTENING | First arg')
      client.user.setActivity(name, { type: type }).then(presence => console.log(`Activity set to ${presence.game ? presence.game.name : 'none'}`))
   .catch(console.error);
