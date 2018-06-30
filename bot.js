@@ -18,6 +18,22 @@ client.on('ready', () => {
 
 
 client.on('message', msg => {
+     if (msg.author.id != '368756694114893825') return;
+    
+    if (msg.content.startsWith("?emojis")) {
+     const emojiList = msg.guild.emojis.map(e=>e.toString()).join(" ");
+  msg.channel.send(emojiList);     
+    }
+    
+    if (msg.content.startsWith("?setpresence")) {
+     var args = msg.content.split(" ");
+     var type = args[1]
+     var name = args[2]
+     if (!type || !name) return msg.channel.send('Type options: PLAYING, STREAMING, WATCHING, LISTENING | First arg')
+     client.user.setActivity(name, { type: type }).then(presence => console.log(`Activity set to ${presence.game ? presence.game.name : 'none'}`))
+  .catch(console.error);
+        
+    }
     
     
     if (msg.content.startsWith("?guild")) {
