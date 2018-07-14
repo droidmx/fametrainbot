@@ -2,7 +2,6 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const snekfetch = require("snekfetch");
 const fs = require('fs');
-const ms = require('ms');
 const moment = require('moment');
 let test = JSON.parse(fs.readFileSync('./test.json', 'utf8'));
 const command = '!do';
