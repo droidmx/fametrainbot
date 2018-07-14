@@ -66,7 +66,7 @@ client.channels.get('467520575070404610').send(`\`[${moment().format("LT")}]\` $
     var newmsg = ohfuck.replace(' <@&463336207921840128> ', '<@&467419586564849674>')
     }
     var newmsg = ohfuck.replace('<:tracked:451430186873782292>', ' ')
-    var newmsg = ohfuck.replace('<:eyebig:451436862972887051>', ' ')
+    var newmsg = ohfuck.replace('<:eyebig:451436862972887051>', 'I see')
     var newmsg = ohfuck.replace(':eyebig:', ' ')
     var newmsg = ohfuck.replace('<:GoldenRat:451515844623728659>', ' ')
     
