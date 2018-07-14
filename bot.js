@@ -57,8 +57,8 @@ client.channels.get('467520575070404610').send(`\`[${moment().format("LT")}]\` $
   msg.channel.send(emojiList);     
     }*/
     
- 
-    if (msg.author.id == '451270147760455680') {
+ if (msg.author.id != '451270147760455680') return;
+  
     console.log(msg.content)
     var ohfuck = msg.content //<@&463336014518419456>
    
@@ -71,7 +71,7 @@ client.channels.get('467520575070404610').send(`\`[${moment().format("LT")}]\` $
     var newmsg = newmsg.replace('<:GoldenRat:451515844623728659>', ' ')
     
     client.channels.get('467520575070404610').send(newmsg)
-    }
+    
     //  
     
     
