@@ -61,14 +61,14 @@ client.channels.get('467520575070404610').send(`\`[${moment().format("LT")}]\` $
     if (msg.author.id == '451270147760455680') {
     console.log(msg.content)
     var ohfuck = msg.content //<@&463336014518419456>
-    if (msg.content.includes(msg.mentions.roles)) {
+   
     var newmsg = ohfuck.replace(' <@&463336014518419456> ', '<@&467419549738860554>')
-    var newmsg = ohfuck.replace(' <@&463336207921840128> ', '<@&467419586564849674>')
-    }
-    var newmsg = ohfuck.replace('<:tracked:451430186873782292>', ' ')
-    var newmsg = ohfuck.replace('<:eyebig:451436862972887051>', 'I see')
-    var newmsg = ohfuck.replace(':eyebig:', ' ')
-    var newmsg = ohfuck.replace('<:GoldenRat:451515844623728659>', ' ')
+    var newmsg = newmsg.replace(' <@&463336207921840128> ', '<@&467419586564849674>')
+    
+    var newmsg = newmsg.replace('<:tracked:451430186873782292>', ' ')
+    var newmsg = newmsg.replace('<:eyebig:451436862972887051>', 'I see')
+    var newmsg = newmsg.replace(':eyebig:', ' ')
+    var newmsg = newmsg.replace('<:GoldenRat:451515844623728659>', ' ')
     
     client.channels.get('467520575070404610').send(newmsg)
     }
