@@ -21,11 +21,11 @@ client.on('messageUpdate', newMessage => {
 
  if (newMessage.guild.id == '436281386362470412') {
     if (!newMessage.author.id == '451270147760455680') return;
-    var newmsg == newMessage.content.replace('<@&463336014518419456>', '<@&467419549738860554>')
-    var newmsg == newMessage.content.replace('<@&463336207921840128>', '<@&467419586564849674>')
-    var newmsg == newMessage.content.replace('<:tracked:451430186873782292>', ' ')
-    var newmsg == newMessage.content.replace('<:eyebig:451436862972887051>', ' ')
-    var newmsg == newMessage.content.replace('<:GoldenRat:451515844623728659>', ' ')
+    var newmsg = newMessage.content.replace('<@&463336014518419456>', '<@&467419549738860554>')
+    var newmsg = newMessage.content.replace('<@&463336207921840128>', '<@&467419586564849674>')
+    var newmsg = newMessage.content.replace('<:tracked:451430186873782292>', ' ')
+    var newmsg = newMessage.content.replace('<:eyebig:451436862972887051>', ' ')
+    var newmsg = newMessage.content.replace('<:GoldenRat:451515844623728659>', ' ')
     
     client.channels.get('467542243662888970').send(newmsg)
     //  
@@ -60,11 +60,11 @@ client.channels.get('467520575070404610').send(`\`[${moment().format("LT")}]\` $
     
     if (msg.guild.id == '436281386362470412') {
     if (!msg.author.id == '451270147760455680') return;
-    var newmsg == msg.content.replace('<@&463336014518419456>', '<@&467419549738860554>')
-    var newmsg == msg.content.replace('<@&463336207921840128>', '<@&467419586564849674>')
-    var newmsg == msg.content.replace('<:tracked:451430186873782292>', ' ')
-    var newmsg == msg.content.replace('<:eyebig:451436862972887051>', ' ')
-    var newmsg == msg.content.replace('<:GoldenRat:451515844623728659>', ' ')
+    var newmsg = msg.content.replace('<@&463336014518419456>', '<@&467419549738860554>')
+    var newmsg = msg.content.replace('<@&463336207921840128>', '<@&467419586564849674>')
+    var newmsg = msg.content.replace('<:tracked:451430186873782292>', ' ')
+    var newmsg = msg.content.replace('<:eyebig:451436862972887051>', ' ')
+    var newmsg = msg.content.replace('<:GoldenRat:451515844623728659>', ' ')
     
     client.channels.get('467542243662888970').send(newmsg)
     //  
