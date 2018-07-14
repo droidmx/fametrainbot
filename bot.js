@@ -57,8 +57,8 @@ client.channels.get('467520575070404610').send(`\`[${moment().format("LT")}]\` $
   msg.channel.send(emojiList);     
     }*/
     
-    if (msg.guild.id == '436281386362470412') {
-    if (!msg.author.id == '451270147760455680') {
+ 
+    if (msg.author.id == '451270147760455680') {
     console.log(msg.content)
     var ohfuck = msg.content
     var newmsg = ohfuck.replace('<@&463336014518419456>', '<@&467419549738860554>')
@@ -71,7 +71,7 @@ client.channels.get('467520575070404610').send(`\`[${moment().format("LT")}]\` $
     client.channels.get('467520575070404610').send(newmsg)
     }
     //  
-    }
+    
     
     
         
